@@ -1,14 +1,16 @@
+using AutoMapper;
+using CommandsComponent.Persistence;
+using CommandsComponent.Profiles;
+using CommandsComponent.Services;
+using CommandsComponent.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MySandbox.Main.Services;
+using MySandbox.Main.Services.Contracts;
 
 namespace Web.API
 {
@@ -24,6 +26,26 @@ namespace Web.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews().AddNewtonsoftJson(
+                options =>
+                {
+                    options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
+                });
+
+            services.AddDbContext<CommandsContext>(opt =>
+            {
+                opt.UseSqlServer(Configuration.GetSection("ConnectionStrings:SqlServer").Value);
+            });
+
+            services.AddTransient<ICommandRepository, CommandRepository>();
+            services.AddTransient<ICommandApplication, CommandApplication>();
+            services.AddTransient<IPlatformApplication, PlatformApplication>();
+            MapperConfiguration mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new CommandsProfile());
+            });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             services.AddControllers();
         }

@@ -1,5 +1,8 @@
+using CommandsComponent.Persistence;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,7 +16,23 @@ namespace Web.API
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = services.GetRequiredService<CommandsContext>();
+                    context.Database.Migrate();
+                    DataPrueba.InsertarDataAsync(context).Wait();
+                }
+                catch (Exception ex)
+                {
+                    var logging = services.GetRequiredService<ILogger<Program>>();
+                    logging.LogError(ex, "Ocurrio un problema en la migracion");
+                }
+            }
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
