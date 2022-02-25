@@ -1,4 +1,4 @@
-﻿using CommandsComponent.Dtos;
+﻿using Commands.Component.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySandbox.Main.API;

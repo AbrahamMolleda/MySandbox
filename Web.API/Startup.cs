@@ -1,8 +1,8 @@
 using AutoMapper;
-using CommandsComponent.Persistence;
-using CommandsComponent.Profiles;
-using CommandsComponent.Services;
-using CommandsComponent.Services.Contracts;
+using Commands.Component.Persistence;
+using Commands.Component.Profiles;
+using Commands.Component.Services;
+using Commands.Component.Services.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

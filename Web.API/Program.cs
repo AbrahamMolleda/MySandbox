@@ -1,4 +1,4 @@
-using CommandsComponent.Persistence;
+using Commands.Component.Persistence;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

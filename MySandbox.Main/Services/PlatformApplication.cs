@@ -1,11 +1,9 @@
-﻿using CommandsComponent.Dtos;
-using CommandsComponent.Services.Contracts;
+﻿using Commands.Component.Dtos;
+using Commands.Component.Services.Contracts;
 using MySandbox.Main.API;
 using MySandbox.Main.Services.Contracts;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace MySandbox.Main.Services

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandsComponent.Dtos
+namespace Commands.Component.Dtos
 {
     public class CommandDto
     {

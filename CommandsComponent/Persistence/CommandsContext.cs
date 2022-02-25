@@ -1,4 +1,4 @@
-﻿using CommandsComponent.Domain;
+﻿using Commands.Component.Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandsComponent.Persistence
+namespace Commands.Component.Persistence
 {
     public class CommandsContext : DbContext
     {

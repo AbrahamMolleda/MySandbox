@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commands.Component", "CommandsComponent\Commands.Component.csproj", "{3EC35501-36FD-480B-B534-A52B5DD5D88D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.MongoDB.Component", "Data.MongoDB.Component\Data.MongoDB.Component.csproj", "{DDD2C5D0-2B57-4A8F-ACEA-21DAD82FDA79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.Component", "Courses.Component\Courses.Component.csproj", "{DCAD6817-E70E-4218-9CCF-2A61B9BE8C88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{3EC35501-36FD-480B-B534-A52B5DD5D88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EC35501-36FD-480B-B534-A52B5DD5D88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EC35501-36FD-480B-B534-A52B5DD5D88D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD2C5D0-2B57-4A8F-ACEA-21DAD82FDA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD2C5D0-2B57-4A8F-ACEA-21DAD82FDA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD2C5D0-2B57-4A8F-ACEA-21DAD82FDA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD2C5D0-2B57-4A8F-ACEA-21DAD82FDA79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAD6817-E70E-4218-9CCF-2A61B9BE8C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAD6817-E70E-4218-9CCF-2A61B9BE8C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAD6817-E70E-4218-9CCF-2A61B9BE8C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAD6817-E70E-4218-9CCF-2A61B9BE8C88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +62,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5DBCEAE0-5EAC-4A7D-842F-355158B4338C} = {79430538-466C-48AC-8CE8-855573986F9C}
 		{3EC35501-36FD-480B-B534-A52B5DD5D88D} = {7FA375F9-0A40-406A-98B0-9D69B9DDA152}
+		{DDD2C5D0-2B57-4A8F-ACEA-21DAD82FDA79} = {7FA375F9-0A40-406A-98B0-9D69B9DDA152}
+		{DCAD6817-E70E-4218-9CCF-2A61B9BE8C88} = {7FA375F9-0A40-406A-98B0-9D69B9DDA152}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {21304F57-9687-419F-9EE0-76EBD3F29A83}

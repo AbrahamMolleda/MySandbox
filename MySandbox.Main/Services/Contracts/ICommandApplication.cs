@@ -1,4 +1,4 @@
-﻿using CommandsComponent.Dtos;
+﻿using Commands.Component.Dtos;
 using MySandbox.Main.API;
 using System;
 using System.Collections.Generic;

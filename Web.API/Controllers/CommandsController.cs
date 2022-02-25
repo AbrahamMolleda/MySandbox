@@ -1,5 +1,5 @@
-﻿using CommandsComponent.Domain;
-using CommandsComponent.Dtos;
+﻿using Commands.Component.Domain;
+using Commands.Component.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using MySandbox.Main.API;
 using MySandbox.Main.Services.Contracts;

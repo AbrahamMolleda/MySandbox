@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
-using CommandsComponent.Domain;
-using CommandsComponent.Dtos;
+using Commands.Component.Domain;
+using Commands.Component.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandsComponent.Profiles
+namespace Commands.Component.Profiles
 {
     public class CommandsProfile : Profile
     {

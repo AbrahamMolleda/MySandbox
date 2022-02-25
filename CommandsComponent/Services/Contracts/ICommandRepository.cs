@@ -1,9 +1,9 @@
-﻿using CommandsComponent.Dtos;
+﻿using Commands.Component.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CommandsComponent.Services.Contracts
+namespace Commands.Component.Services.Contracts
 {
     public interface ICommandRepository
     {

@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
-using CommandsComponent.Domain;
-using CommandsComponent.Dtos;
-using CommandsComponent.Persistence;
-using CommandsComponent.Services.Contracts;
+using Commands.Component.Domain;
+using Commands.Component.Dtos;
+using Commands.Component.Persistence;
+using Commands.Component.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace CommandsComponent.Services
+namespace Commands.Component.Services
 {
     public class CommandRepository : ICommandRepository
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CommandsComponent.Domain
+namespace Commands.Component.Domain
 {
     public class Platform
     {
