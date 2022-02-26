@@ -1,6 +1,7 @@
 ﻿using Commands.Component.Dtos;
 using Commands.Component.Services.Contracts;
 using MySandbox.Main.API;
+using MySandbox.Main.Helpers;
 using MySandbox.Main.Services.Contracts;
 using System;
 using System.Collections.Generic;
@@ -48,15 +49,21 @@ namespace MySandbox.Main.Services
 
         public async Task<Response<List<CommandDto>>> GetAllCommands()
         {
-            Response<List<CommandDto>> response = new Response<List<CommandDto>>();
+            //Response<List<CommandDto>> response = new Response<List<CommandDto>>();
             List<CommandDto> commandsList = await _commandRepository.GetAllCommands();
-            if (commandsList == null)
+            Response<List<CommandDto>> response = ResponseValidator<List<CommandDto>>.ValidateData(
+                commandsList, 
+                "Aqui esta la lista de comandos", 
+                "No se pudo obtener la lista de comandos"
+                );
+            /*if (commandsList == null)
             {
                 response.setError("ups", "No se pudo obtener la lista de comandos");
                 return response;
             }
             response.SetSuccess("Success!", "Aqui esta la lista de comandos");
             response.Data = commandsList;
+            */
             return response;
         }
 

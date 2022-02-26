@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CommandsComponent\Commands.Component.csproj" />
+    <ProjectReference Include="..\Courses.Component\Courses.Component.csproj" />
   </ItemGroup>
 
 </Project>

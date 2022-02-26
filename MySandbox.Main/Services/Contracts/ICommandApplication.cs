@@ -9,8 +9,8 @@ namespace MySandbox.Main.Services.Contracts
     public interface ICommandApplication
     {
         Task<Response<CommandDto>> CreateCommand(CommandDto command);
-        Task<Response<IndividualCommandDto>> GetCommandById(Guid id);
         Task<Response<List<CommandDto>>> GetAllCommands();
+        Task<Response<IndividualCommandDto>> GetCommandById(Guid id);
         Task<Response<CommandDto>> UpdateCommand(CommandDto command, Guid id);
         Task<Response<CommandDto>> DeleteCommand(Guid id);
     }

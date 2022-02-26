@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp
+namespace Courses.Component.Persistence
 {
-    class Program
+    public class DataPrueba
     {
     }
 }
