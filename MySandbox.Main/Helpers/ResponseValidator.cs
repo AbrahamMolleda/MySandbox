@@ -9,7 +9,7 @@ namespace MySandbox.Main.Helpers
 {
     public static class ResponseValidator<T>
     {
-        /*
+        
         public static Response<T> ValidateData(T parameter, string successMessage, string failMessage)
         {
             Response<T> response = new Response<T>();
@@ -23,6 +23,6 @@ namespace MySandbox.Main.Helpers
             response.Data = parameter;
             return response;
         }
-        */
+        
     }
 }
